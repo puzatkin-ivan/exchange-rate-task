@@ -89,4 +89,14 @@ class Rate
 
         return $this;
     }
+
+    public function toArray(): array
+    {
+        return [
+            'from' => $this->from_currency,
+            'to' => $this->to_currency,
+            'date' => $this->date,
+            'rate' => $this->rate,
+        ];
+    }
 }
